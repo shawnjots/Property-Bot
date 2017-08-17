@@ -51,7 +51,7 @@ namespace Microsoft.Bot.Sample.JobListingBot.Dialogs
                          SelectProvince);
             return Task.CompletedTask;
         }
-
+        //
         public  Task SelectProvince(IDialogContext context, IAwaitable<FilterExpression> input)
         {
             context.Call(new SearchRefineDialog(SearchDialogIndexClient.Schema.Fields["Region"], queryBuilder1, promptStyler: new FacebookQuickRepliesPromptStyler(), prompt: "Select a Province"), SelectCity);
